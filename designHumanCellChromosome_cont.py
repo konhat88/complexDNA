@@ -52,22 +52,21 @@ past = np.zeros((1,3))
 walk = randomwalk3D(c18,ko,zi,ko,past,-ko,-ko2,zi3,zi,-ko,ko)
 programTimeExecution = time.time() - programT1
 print(programTimeExecution," seconds")
-past = np.delete(past,0,axis=0)
 past = np.concatenate((past,walk))
+past = np.delete(past,0,axis=0)
 
 walk = randomwalk3D(c19,ko,zi,ko,past,-ko,-ko2,zi3,zi,-ko,ko)
 past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
 
 walk = randomwalk3D(c20,ko,zi,ko,past,-ko2,0,zi3,zi,-ko,ko)
-past = np.delete(past,0,axis=0)
 past = np.concatenate((past,walk))
+past = np.delete(past,0,axis=0)
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
@@ -76,14 +75,13 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
 
 walk = randomwalk3D(c22,ko,zi,ko,past,0,ko2,zi3,zi,-ko,ko)
-past = np.delete(past,0,axis=0)
 past = np.concatenate((past,walk))
+past = np.delete(past,0,axis=0)
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
@@ -92,18 +90,16 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
 
 walk = randomwalk3D(c24,ko,zi,ko,past,ko2,ko,zi3,zi,-ko,ko)
-past = np.delete(past,0,axis=0)
 past = np.concatenate((past,walk))
+past = np.delete(past,0,axis=0)
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 
 programTimeExecution = time.time() - programT1
