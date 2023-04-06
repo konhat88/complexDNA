@@ -60,7 +60,7 @@ print(past)
 past = np.delete(past,0,axis=0)
 print(past)
 # Save before going to the next area
-toSave = past
+#toSave = past
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -71,7 +71,7 @@ past = np.concatenate((past,walk))
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
 past = np.delete(past,0,axis=0)
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -82,7 +82,7 @@ past = np.concatenate((past,walk))
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
 past = np.delete(past,0,axis=0)
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -93,7 +93,7 @@ past = np.concatenate((past,walk))
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
 past = np.delete(past,0,axis=0)
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -114,7 +114,7 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -145,7 +145,7 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -166,7 +166,7 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -182,7 +182,7 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -198,7 +198,7 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -214,7 +214,7 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -230,7 +230,7 @@ past = np.concatenate((past,walk))
 #ax.plot(walk[:,0], walk[:,1], walk[:,2], alpha=0.9)
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 past = np.zeros((1,3))
 
@@ -241,7 +241,7 @@ past = np.concatenate((past,walk))
 #ax.scatter(walk[-1,0], walk[-1,1], walk[-1,2])
 
 past = np.delete(past,0,axis=0)
-toSave = np.concatenate((toSave,past))
+#toSave = np.concatenate((toSave,past))
 np.savetxt(ofile2,past)
 
 
