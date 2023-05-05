@@ -6,35 +6,35 @@
 # Author contact, Konstantinos Chatzipapas, chatzipa@cenbg.in2p3.fr, 01/03/2022
 
 # INPUTS
-ifile1= "human_cell_23chromo_position_5.txt"
-ofile1= "human_cell_23chromosomes_5.txt"
-ofile2= "human_cell_23chromosomes_final_5.txt"
+ifile1= "human_cell_23chromo_position_7.txt"
+ofile1= "human_cell_23chromosomes_7.txt"
+ofile2= "human_cell_23chromosomes_final_7.txt"
 
 # Length of each chromosome (THIS SHOULD BE THE SAME, AS IN THE designHumanCellChromosome.py)
-c1  = 88000
-c2  = 87000
-c3  = 17000
-c4  = 71500
-c5  = 32500
-c6  = 69000
-c7  = 21000
-c8  = 65000
-c9  = 23500
-c10 = 61000
-c11 = 41500
-c12 = 57000
-c13 = 48000
-c14 = 48500
-c15 = 39000
-c16 = 48000
-c17 = 36500
-c18 = 52000
-c19 = 51000
-c20 = 28500
-c21 = 27500
-c22 = 23500
-c23 = 18000
-c24 = 99000
+c1	=	18000
+c2	=	61000
+c3	=	25000
+c4	=	24000
+c5	=	60000
+c6	=	44000
+c7	=	29000
+c8	=	66000
+c9	=	70000
+c10	=	95000
+c11	=	94000
+c12	=	54000
+c13	=	56000
+c14	=	77000
+c15	=	74000
+c16	=	30000
+c17	=	52000
+c18	=	41000
+c19	=	52000
+c20	=	51000
+c21	=	34000
+c22	=	39000
+c23	=	19000
+#c24 = 99000
 #c25 = 36000 # small addition
 
 
@@ -85,7 +85,7 @@ chromo20 = np.zeros((c20,3))
 chromo21 = np.zeros((c21,3))
 chromo22 = np.zeros((c22,3))
 chromo23 = np.zeros((c23,3))
-chromo24 = np.zeros((c24,3))
+#chromo24 = np.zeros((c24,3))
 #chromo25 = np.zeros((c25,3)) ###
 
 for k in range(c1):
@@ -134,8 +134,8 @@ for k in range(c22):
     chromo22[k,:] = coord[k+c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+c20+c21,:]
 for k in range(c23):
     chromo23[k,:] = coord[k+c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+c20+c21+c22,:]
-for k in range(c24):
-    chromo24[k,:] = coord[k+c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+c20+c21+c22+c23,:]
+#for k in range(c24):
+#    chromo24[k,:] = coord[k+c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+c20+c21+c22+c23,:]
 #for k in range(c25):
 #    chromo25[k,:] = coord[k+c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+c20+c21+c22+c23+c24,:]
 
@@ -147,7 +147,7 @@ print (chromo1)
 
 # For validation
 print(len(coord))
-print(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+c20+c21+c22+c23+c24)
+print(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+c20+c21+c22+c23)#+c24)
 
 # Create path from the coordinates path
 voxelised_fractal_1  = v.VoxelisedFractal.from_path(chromo1)
@@ -173,7 +173,7 @@ voxelised_fractal_20 = v.VoxelisedFractal.from_path(chromo20)
 voxelised_fractal_21 = v.VoxelisedFractal.from_path(chromo21)
 voxelised_fractal_22 = v.VoxelisedFractal.from_path(chromo22)
 voxelised_fractal_23 = v.VoxelisedFractal.from_path(chromo23)
-voxelised_fractal_24 = v.VoxelisedFractal.from_path(chromo24)
+#voxelised_fractal_24 = v.VoxelisedFractal.from_path(chromo24)
 #voxelised_fractal_25 = v.VoxelisedFractal.from_path(chromo25)
 
 
@@ -210,7 +210,7 @@ x20 = voxelised_fractal_20.to_text()
 x21 = voxelised_fractal_21.to_text()
 x22 = voxelised_fractal_22.to_text()
 x23 = voxelised_fractal_23.to_text()
-x24 = voxelised_fractal_24.to_text()
+#x24 = voxelised_fractal_24.to_text()
 #x25 = voxelised_fractal_25.to_text()
 
 with open(ofile1, 'w+') as ofile:
@@ -259,8 +259,8 @@ with open(ofile1, 'w+') as ofile:
     ofile.write(x22)
     ofile.write("\n")
     ofile.write(x23)
-    ofile.write("\n")
-    ofile.write(x24)
+    #ofile.write("\n")
+    #ofile.write(x24)
     #ofile.write("\n")
     #ofile.write(x25)
 
