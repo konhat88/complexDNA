@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-kozi = "y" # Choose y or z to plot xz or xy respectively
-ifile= open("plotPos_random_5_y.txt","r")
+kozi = "z" # Choose y or z to plot xz or xy respectively
+ifile= open("plotPos_random_7_z.txt","r")
 
 import numpy as np, matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D

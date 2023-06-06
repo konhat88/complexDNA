@@ -22,9 +22,11 @@ def randomwalk3D(n,a,b,c,past,x1,x2,y1,y2,z1,z2):
                     xyz = np.concatenate((xyz,xyzN))
     #print(xyz)
     xyz = np.delete(xyz, 0, axis=0)
+    print(xyz.size)
     np.random.shuffle(xyz)
     choise = xyz[0,:]
     path[0,:] = choise
+    #path[0,:] = [ min(xyz[:,0])+1, min(xyz[:,1]+1), min(xyz[:,2])+1 ]
     print(path[0,:])
 
     # Check if the starting point of the chromosome, already exists in the path, to avoid overlaps
@@ -43,24 +45,34 @@ def randomwalk3D(n,a,b,c,past,x1,x2,y1,y2,z1,z2):
 
     # Create the random walk
     start=time.time()
+    #startT=time.time()
     i=1
+    kolima = 0
     while i < n:
         # Check if the code is stuck in the same position for a lot of time.
         # If yes return some positions back and try again.
         dt = time.time()-start
-        if dt>3:
+        #dtT = time.time()-startT
+        if dt>4:
             if i>10:
                 i -= 10
                 start=time.time()
-                print("stopped: ", i)
+                print("stopped: ", i,kolima)
+                kolima += 1
             else:
                 i -=1
                 start=time.time()
+        if kolima>1000:
+            i -= 1000
+            #startT=time.time()
+            kolima = 0
+            print("stoppedBig: ", i)
         #print(i)
         newPos = np.zeros((1,3))
 
         # Choose a random step from the available directions
-        step = random.choice(directions)
+        #step = random.choice(directions)
+        step = random.choices(directions, weights=(1,1,4,3,4,3), k=1)
         # Avoid straight paths. If tries to avoid straight, but they can still exist.
         # Using while, straights will not exist. May lead to not be able to design the DNA.!
         if step==previousStep:
@@ -68,6 +80,7 @@ def randomwalk3D(n,a,b,c,past,x1,x2,y1,y2,z1,z2):
             #print("-->")
             random.shuffle(directions)
             step = random.choice(directions)
+            #step = random.choices(directions, weights=(9,9,32,9,32,9), k=1)
         #print(step)
         previousStep = step
 

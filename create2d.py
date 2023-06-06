@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-ifile = open("human_cell_23chromosomes_final_5.txt","r")
-kozi = "y" # Choose y or z to plot xz or xy respectively
-ofile= open("plotPos_random_5_y.txt","w+")
+ifile = open("human_cell_23chromosomes_final_7.txt","r")
+kozi = "z" # Choose y or z to plot xz or xy respectively
+ofile= open("plotPos_random_7_z.txt","w+")
 
 cnt = 0
 st  = 0
