@@ -12,4 +12,4 @@ To view a plane of the new geometry:
 2) run the "plotDNA.py"
 
 More details can be find here: https://doi.org/10.1016/j.ejmp.2024.104839
-Please cite this article together with github, if you use complexDNA.
+Please cite this article and the repository, if you use complexDNA.
